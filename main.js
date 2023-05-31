@@ -96,3 +96,27 @@ posts.forEach((postElement) => {
     </div>
     `;
 });
+
+const likesButton = document.querySelector('.like-button');
+
+let likesCounter = document.querySelector('.likes__counter');
+
+const idList = [];
+
+
+likesButton.addEventListener('click', function() {
+
+    posts.likes += 1;
+
+    likesButton.classList.add('like-button--liked');
+
+    idList.push(posts.id);
+
+    
+});
+
+
+likesCounter.appendChild(posts.likes);
+
+
+
