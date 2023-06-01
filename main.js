@@ -62,6 +62,8 @@ const containerPost = document.getElementById('container');
 
 posts.forEach((postElement) => {
 
+    posts.created = posts.created.split('-').reverse().join('-');
+
     containerPost.innerHTML +=
     `
     <div class="post">
